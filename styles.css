@@ -5,7 +5,7 @@
 
 
 
-.urbanist {
+.Urbanist {
     font-family: "Urbanist";
     font-optical-sizing: auto;
     font-weight: <weight>;
@@ -51,64 +51,63 @@
     color: #25A59E;       
 }
 .container-image {
-    position: relative; /* Set the container to relative to position the child elements */
-    width: 100%;        /* Adjust width as needed */
-    height: 400px;      /* Adjust height as needed */
-    overflow: hidden;   /* Hide overflow to contain images */
-    transform: translateY(-20px); /* Move the container upwards by 20px */
+    position: relative; 
+    width: 100%;       
+    height: 400px;      
+    overflow: hidden;  
+    transform: translateY(-20px); 
 }
 
 
-/* Blurry image - Bottom layer */
+/* Blurry image  */
 .container-image .blurry {
     position: absolute;
-    top: 50%;           /* Center vertically */
-    left: 50%;          /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust to the center */
-    width: 70%;        /* Full width */
-    height: auto;       /* Maintain aspect ratio */
+    top: 50%;          
+    left: 50%;          
+    transform: translate(-50%, -50%); 
+    width: 70%;        
+    height: auto;       
     z-index: 1; 
     margin: ;
 }
 
-/* Ellipse image - Middle layer */
+/* Ellipse image  */
 .container-image .ellipse {
     position: absolute;
-    top: 0; /* Align the top of the ellipse with the top of the container */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally without moving it vertically */
-    width: 70%; /* Adjust width */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 2; /* Middle layer */
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 70%; 
+    height: auto; 
+    z-index: 2; 
 }
 
 
 /* Group image - Top layer */
 .container-image .grp {
     position: absolute;
-    top: 50%;           /* Center vertically */
-    left: 50%;          /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust to the center */
-    width: 50%;         /* Adjust width */
-    height: auto;       /* Maintain aspect ratio */
-    z-index: 3;         /* Top layer */
+    top: 50%;           
+    left: 50%;          
+    transform: translate(-50%, -50%); 
+    width: 50%;         
+    height: auto;       
+    z-index: 3;        
 }
 /* Container for the destination text */
 .destination {
-    display: flex;              /* Use Flexbox for centering */
-    flex-direction: column;     /* Arrange children vertically */
-    justify-content: center;    /* Center vertically */
-    align-items: center;        /* Center horizontally */
-    text-align: center;         /* Center text within the elements */
+    display: flex;              
+    flex-direction: column;     
+    justify-content: center;   
+    align-items: center;        
+    text-align: center;         
     height: 162px;  
-    width: 1200px;  
-    padding: ;          /* Optional: Full viewport height to center vertically */
+    width: 1200px;         
 }
 
 /* Styling for the paragraph element */
 .destination p {
-    font-size: 72px;            /* Set font size */
-    font-weight: 400;           /* Set font weight */
+    font-size: 72px;            
+    font-weight: 400;           
     margin: 0; 
     font-family: "Gilda Display";
     line-height: 84px;
@@ -118,10 +117,10 @@
 
 /* Styling for the h4 element */
 .destination h4 {
-    font-size: 24px;            /* Set font size */
-    font-weight: 500;           /* Set font weight */
+    font-size: 24px;            
+    font-weight: 500;          
     /* margin: 10px 0 0;  */
-    font-family: "Urbanist";        /* Add some margin to space out elements */
+    font-family: "Urbanist";        
 }
 
 /* General reset and box-sizing for consistency */
@@ -133,45 +132,45 @@
 
 /* Container to hold multiple cards */
 .card-container {
-    display: flex; /* Flexbox for layout */
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
-    gap: 20px; /* Space between cards */
-    justify-content: space-between; /* Distribute space between cards */
-    padding: 20px; /* Padding around the container */
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: space-between; 
+    padding: 20px; 
 }
 
 /* Individual card styling */
 .card1, .card2, .card3, .card4, .card5, .card6 {
-    flex: 1 1 calc(33.3% - 20px); /* Set card width to 33.3% with gap adjustment */
-    border: 1px solid #ccc; /* Border around each card */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Crop overflowing content */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    background-color: #fff; /* Background color */
-    padding: 16px, 16px, 36px, 16px; /* Inner padding for card content */
+    flex: 1 1 calc(33.3% - 20px); 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #fff; 
+    padding: 16px, 16px, 36px, 16px; 
     gap: 28px;
 }
 
 /* Styling for the images */
 .card1 img, .card2 img, .card3 img, .card4 img, .card5 img, .card6 img {
-    width: 100%; /* Full width for the image within the card */
+    width: 100%; 
     justify-content: center;
-    height:300px; /* Set a medium height for the image */
-    object-fit: cover; /* Cover the space without distorting the image */
-    border-radius: 8px; /* Optional: Rounded corners for the images */
-    margin-bottom: 10px; /* Space between the image and content */
+    height:300px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin-bottom: 10px; 
     padding: 16px, 16px, 36px, 16px;
 }
 
 /* Inner content styling */
 .left {
-    padding: 10px; /* Inner padding */
+    padding: 10px;
 }
 
 /* Heading styling */
 .left h2 {
-    font-size: 1.5em; /* Font size for the heading */
-    margin-bottom: 10px; /* Space below the heading */
+    font-size: 1.5em; 
+    margin-bottom: 10px; 
     font-family: "Urbanist";
     font-weight: 700;
     size: 24px;
@@ -180,8 +179,8 @@
 
 /* Location container styling */
 .location-container {
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Vertical alignment */
+    display: flex;
+    align-items: center; 
     width: Fill (330.67px);
     height: Hug (32px);
     gap: 8px;
@@ -191,16 +190,16 @@
 
 /* Styling for the location icon */
 .location{
-    width: 24px; /* Adjust size to be small */
-    height: 24px; /* Adjust size to be small */
-    margin-right: 5px; /* Space between icon and text */
+    width: 24px; 
+    height: 24px; 
+    margin-right: 5px; 
     size: 10px;
 }
 
 /* Styling for the location text */
 .location-container h4 {
-    font-size: 1em; /* Font size for the location text */
-    color: #333; /* Text color */
+    font-size: 1em;
+    color: #333; 
     font-family: "Urbanist";
     font-weight: 600;
     size: 18px;
@@ -210,25 +209,25 @@
 /* Media query for responsiveness */
 @media (max-width: 768px) {
     .card1, .card2, .card3, .card4, .card5, .card6 {
-        flex: 1 1 100%; /* Full width on smaller screens */
+        flex: 1 1 100%; 
     }
 }
 
 /* Styling for the why section */
 .why {
-    display: flex; /* Use Flexbox for centering */
-    flex-direction: column; /* Arrange items vertically */
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Center text within each element */
-    padding: 20px; /* Add some padding around the content */
-    margin: 0 auto; /* Center the section within the parent container */
-    max-width: 800px; /* Optional: Limit the maximum width */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    padding: 20px; 
+    margin: 0 auto; 
+    max-width: 800px;
 }
 
 /* Styling for the heading */
 .why h2 {
-    font-size: 72px; /* Larger font size for the main heading */
-    margin-bottom: 10px; /* Space between h2 and h5 */
+    font-size: 72px;
+    margin-bottom: 10px; 
     font-family: "GIlda DIsplay";
     font-weight: 400;
     size: 72px;
@@ -237,9 +236,9 @@
 
 /* Styling for the subheading */
 .why h5 {
-    font-size: 18px; /* Font size for the subheading */
-    line-height: 32px; /* Improve line spacing for readability */
-    color: #0c0000; /* Optional: Change text color */
+    font-size: 18px; 
+    line-height: 32px; 
+    color: #0c0000; 
     font-family: "Urbanist";
     font-weight: 500;
 
@@ -249,26 +248,26 @@
 
 /* Container for all cards */
 .card-container {
-    display: flex; /* Flexbox to align items in a row */
-    gap: 28px; /* Gap between the cards */
-    width: Fill (1,200px); /* Total width for the container */
-    margin: auto; /* Center the container horizontally */
+    display: flex; 
+    gap: 28px; 
+    width: Fill (1,200px);
+    margin: auto; 
     height: Hug (400px);
 
 }
 
 /* Individual card styling */
 .card-2 {
-    flex: 1; /* Ensures each card takes equal space */
-    background-color:#FFFFFF; /* Default background color */
-    height: 400px; /* Fixed height */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    flex: 1; 
+    background-color:#FFFFFF;
+    height: 400px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px; /* Padding inside each card */
+    padding: 20px; 
     gap: 80px;
     width: Fill (381.33px);
 
@@ -276,7 +275,7 @@
 
 /* Hover effect for each card */
 .card-2:hover {
-    background-color: #25A59E; /* Background color on hover */
+    background-color: #25A59E; 
 }
 
 /* Content styling */
@@ -330,9 +329,9 @@
 
 /* Align the more-details link to the right */
 .more-details {
-    display: flex; /* Enables flexbox layout for the container */
-    justify-content: flex-end; /* Aligns the link to the end (right side) */
-    flex-grow: 1; /* Allows the container to take up any remaining space */
+    display: flex; 
+    justify-content: flex-end;
+    flex-grow: 1; 
     font-family: "Gilda Display";
     size: 20px;
     line-height: 23.54px;
@@ -352,10 +351,10 @@
 
 /* Styling for the memorable section */
 .memorable {
-    display: flex; /* Use Flexbox for side-by-side layout */
-    align-items: center; /* Vertically center content */
-    justify-content: space-between; /* Space between text and image */
-    /* padding: 20px; Padding around the section */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    /* padding: 20px;  */
     padding: 20px;
     width: Fixed (1,440px);
     height: Hug (685px);
@@ -365,31 +364,31 @@
 
 /* Styling for the text container */
 .text-container {
-    flex: 1; /* Allow text container to take up available space */
-    max-width: 60%; /* Optional: Limit the maximum width */
+    flex: 1; 
+    max-width: 60%; 
 }
 
 /* Styling for the image container */
 .image-container {
-    flex: 1; /* Allow image container to take up available space */
-    display: flex; /* Use Flexbox to center the image if needed */
-    justify-content: flex-end; /* Align image to the right */
+    flex: 1; 
+    display: flex; 
+    justify-content: flex-end; 
     height: 485px;
     width: 658px;
 }
 
 /* Styling for the image */
 .img1 {
-    /* max-width: 100%; Ensure image doesn't overflow */
-    height: 485px; /* Maintain aspect ratio */
-    margin-left: 20px; /* Space between text and image */
+    /* max-width: 100%; */
+    height: 485px; 
+    margin-left: 20px; 
     width: 658px;
 }
 
 /* Styling for the heading */
 .memorable h2 {
-    font-size: 72px; /* Font size for the main heading */
-    margin-bottom: 10px; /* Space between h2 and h5 */
+    font-size: 72px; 
+    margin-bottom: 10px;
     font-family:"Gilda Display";
     font-weight: 400;
     line-height: 84px;
@@ -397,53 +396,53 @@
 
 /* Styling for the subheading */
 .memorable h5 {
-    font-size: 18px; /* Font size for the subheading */
-    line-height: 32px; /* Improve line spacing for readability */
-    color: #080000; /* Optional: Change text color */
+    font-size: 18px; 
+    line-height: 32px; 
+    color: #080000; 
     font-family: "Urbanist";
     font-weight: 500;
 }
 
 /* Styling for span elements */
 .memorable span {
-    color: #25A59E; /* Blue color for the span elements */
+    color: #25A59E; 
 }
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
     .memorable {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        text-align: center; /* Center-align text */
+        flex-direction: column; 
+        text-align: center; 
     }
 
     .text-container,
     .image-container {
-        max-width: 100%; /* Full width for both containers */
+        max-width: 100%; 
     }
 
     .img1 {
-        margin: 20px 0 0 0; /* Margin on top when stacked */
+        margin: 20px 0 0 0; 
     }
 }
 
 /* Styling for the watch section */
 .watch {
-    display: flex; /* Use Flexbox for centering */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    height: 168px; /* Optional: Full viewport height to center the text vertically */
-    text-align: center; /* Center text within the container */
-    padding: 20px; /* Padding around the content */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 168px; 
+    text-align: center; 
+    padding: 20px;
     padding-top: 170px;
     
 }
 
 /* Styling for the paragraph text */
 .watch p {
-    font-size: 72px; /* Large font size */
-    font-weight: 400; /* Optional: Make text bold */
-    color:#262626; /* Text color */
-    line-height: 84px; /* Adjust line height for better readability */
+    font-size: 72px; 
+    font-weight: 400; 
+    color:#262626;
+    line-height: 84px; 
     font-family: "Gilda Display";
     border: 0.2px;
 
@@ -451,38 +450,38 @@
 
 /* Styling for the video container */
 .video {
-    display: flex; /* Use Flexbox for layout */
-    justify-content: center; /* Center the video horizontally */
-    align-items: center; /* Center the video vertically */
-    padding: 10px; /* Gap of 10px around the video */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px; 
     padding-bottom: 70px;
     padding-top: 70px;
 }
 
 /* Styling for the video element */
 .video iframe {
-    width: 1440px; /* Set the width of the video */
-    height: 600px; /* Set the height of the video */
-    max-width: 100%; /* Responsive: Ensure it doesn't overflow */
-    border: none; /* Remove the border */
+    width: 1440px; 
+    height: 600px; 
+    max-width: 100%; 
+    border: none; 
 }
 
 
 /* Styling for the CTA section */
 .cta {
-    display: flex; /* Use Flexbox for layout */
-    justify-content: space-between; /* Space between h1 and the image */
-    align-items: center; /* Center items vertically */
-    padding: 40px; /* Padding around the container */
-    border-radius: 8px; /* Optional: Rounded corners for the container */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 40px; 
+    border-radius: 8px; 
     padding-left: 50px;
     padding-right: 50px;
 }
 
 /* Styling for the heading */
 .cta h1 {
-    font-size: 2em; /* Font size for the heading */
-    margin: 0; /* Remove default margin */
+    font-size: 2em; 
+    margin: 0; 
     font-family: "Gilda Display";
     font-weight: 400;
     line-height: 84px;
@@ -492,38 +491,38 @@
 
 /* Styling for the image */
 .cta img {
-    height: 50px; /* Adjust the height of the image */
-    width: auto; /* Maintain aspect ratio */
+    height: 50px; 
+    width: auto; 
 }
 
 /* Responsive styling */
 @media (max-width: 768px) {
     .cta {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        text-align: center; /* Center align text */
+        flex-direction: column; 
+        text-align: center; 
     }
 
     .cta h1 {
-        margin-bottom: 15px; /* Space between the heading and the image */
+        margin-bottom: 15px; 
     }
 
     .cta img {
-        height: 40px; /* Adjust image size for smaller screens */
+        height: 40px; 
     }
 }
 
 /* Styling for the footer section */
 .footer {
-    text-align: left; /* Align text to the left */
-    padding: 20px; /* Add padding around the container */
-    border-top: 2px  /* Optional: Top border for visual separation */
+    text-align: left; 
+    padding: 20px; 
+    border-top: 2px;
 }
 
 /* Styling for paragraphs in the footer */
 .footer p {
-    margin: 10px 0; /* Space between paragraphs */
-    font-size: 18px; /* Font size for the text */
-    color:#595959; /* Text color */
+    margin: 10px 0; 
+    font-size: 18px; 
+    color:#595959; 
     font-family: "Urbanist";
     font-weight: 500;
     line-height: 32px;
@@ -533,8 +532,8 @@
 
 /* Styling for the span element */
 .footer span {
-    color:#25A59E; /* Blue color for the span */
-    font-weight: 400; /* Optional: Make the span text bold */
+    color:#25A59E; 
+    font-weight: 400;
     font-family: "Gilda Display";
     font-size: 28px;
     letter:10%;
@@ -543,25 +542,25 @@
 
 /* Styling for the main container holding social and home-link sections */
 .social-container {
-    display: flex; /* Use Flexbox for layout */
-    justify-content: space-between; /* Space between social and home-link */
-    align-items: center; /* Center items vertically */
-    padding: 20px; /* Padding around the container */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px;
 
 }
 
 /* Styling for the social section */
 .social {
-    display: flex; /* Use Flexbox for the social icons */
-    gap: 32px; /* Space between social icons */
+    display: flex; 
+    gap: 32px; 
     height: Fixed (42px);
     width: Hug (184px);
 }
 
 /* Styling for the social images */
 .social a img {
-    width: 21.33px; /* Set a fixed width for the social icons */
-    height: 15.33px; /* Set a fixed height for the social icons */
+    width: 21.33px; 
+    height: 15.33px; 
     top: 12.67px;
     left: 9.33px;
     color: #25A59E;
@@ -569,16 +568,16 @@
 
 /* Styling for the home-link section */
 .home-link {
-    display: flex; /* Use Flexbox for links */
-    gap: 20px; /* Space between links */
+    display: flex; 
+    gap: 20px; 
 }
 
 /* Styling for the home-link anchors */
 .home-link a {
-    text-decoration: none; /* Remove underline from links */
-    color:#595959; /* Text color */
-    font-size: 18px; /* Font size for the links */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    text-decoration: none; 
+    color:#595959; 
+    font-size: 18px; 
+    transition: color 0.3s ease; 
     font-family: "Urbanist";
     font-weight: 600;
     line-height: 32px;
@@ -586,7 +585,7 @@
 
 /* Hover effect for home-link anchors */
 .home-link a:hover {
-    color: #007bff; /* Change color on hover */
+    color: #007bff; 
 }
 
 

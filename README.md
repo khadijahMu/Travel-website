@@ -61,7 +61,7 @@ with these simple steps below you can set up the website
 
     ```sh
 
-    cd Travel website
+    cd Travel-website
 
     ```
 
