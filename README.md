@@ -27,7 +27,7 @@ introduction: The travel website is a website where you can explore fascinating 
 
 ## Live Demo
 
-Check out the live demo of the project: [Live Demo Link](https://example.com)
+Check out the live demo of the project: [Live Demo Link](https://travel-website-khadijah.onrender.com)
 
 ## Features
 
