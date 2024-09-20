@@ -68,12 +68,6 @@
     }
 }
 
-
-
-
-
-
-
 .container-text {
     text-align: center;     
     padding: 20px;          
@@ -89,6 +83,23 @@
 .container-text span {
     color: #25A59E;       
 }
+
+/* Media Query for mobile devices */
+@media (max-width: 768px) {
+    .container-text p {
+        font-size: 40px;  
+        padding: 15px;    
+    }
+}
+.container-image {
+    position: relative; 
+    width: 100%;        
+    height: 400px;      
+    overflow: hidden;   
+    transform: translateY(-20px); 
+}
+
+/* Blurry image - Bottom layer */
 .container-image {
     position: relative;
     width: 100%;
@@ -165,6 +176,18 @@
     .container-image .grp {
         width: 100%; /* Full width for very small screens */
     }
+}
+
+/* Container for the destination text */
+.destination {
+    display: flex;              
+    flex-direction: column;     
+    justify-content: center;    
+    align-items: center;       
+    text-align: center;        
+    height: 162px;  
+    width: 1200px;  
+    padding: ;         
 }
 
 /* Container for the destination text */
@@ -248,9 +271,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Container to hold multiple cards */
+}/* Container to hold multiple cards */
 .card-container {
     display: flex; 
     flex-wrap: wrap;
@@ -362,11 +383,7 @@
     font-family: "Urbanist";
     font-weight: 500;
 
-
-
 }
-
-
 /* Container for all cards */
 .card-container {
     display: flex;
@@ -398,6 +415,17 @@
 /* Hover effect for each card */
 .card-2:hover {
     background-color: #25A59E;
+}
+
+/* Change text color and arrow on hover */
+.card-2:hover .title-for-card,
+.card-2:hover .description-for-explanation,
+.card-2:hover .more-details a {
+    color: #FFFFFF;  /* Set text to white on hover */
+}
+
+.card-2:hover .action img {
+    filter: brightness(0) invert(1); /* Change arrow icon color to white on hover */
 }
 
 /* Content styling */
@@ -517,7 +545,6 @@
         font-size: 14px; 
     }
 }
-
 /* Styling for the memorable section */
 .memorable {
     display: flex;
@@ -560,6 +587,9 @@
     font-family: "Gilda Display";
     font-weight: 400;
     line-height: 84px;
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden;    /* Hide any overflow text */
+
 }
 
 /* Styling for the subheading */
@@ -599,6 +629,13 @@
         margin: 0; 
         max-width: 100%; 
         height: auto; 
+    }
+
+    .memorable h2 {
+        font-size: 48px; 
+        white-space: normal; 
+        /* word-wrap: break-word;  */
+        line-height: 1.2; 
     }
 }
 
@@ -724,9 +761,9 @@
         padding-right: 20px; 
     }
 
-    .cta h1 {
+    /* .cta h1 {
         margin-bottom: 15px;
-    }
+    } */
 
     .cta img {
         height: 40px;
