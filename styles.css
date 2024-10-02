@@ -16,32 +16,33 @@
     font-weight: 400;
     font-style: normal;
 }  
-    .nav {
-        display: flex;          
-        align-items: center;       
-        justify-content: space-between; 
-        padding: 10px 20px;        
-    }
+.nav {
+    display: flex;          
+    align-items: center;       
+    justify-content: space-between; 
+    padding: 10px 20px;        
 }
+
 .nav .button {
     width: 30px;          
     height: 30px;           
     cursor: pointer;          
 }
-.nav span{
+
+.nav span {
     color: #25A59E;
     font-weight: bold;
     font-size: 20px; 
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
+/* Responsive styles for mobile phones */
+@media (max-width: 600px) {
     
+    /* Adjust button size for phones */
     .nav .button {
         width: 25px;
         height: 25px;
     }
-    
     
     .nav span {
         font-size: 18px;
@@ -49,7 +50,7 @@
 }
 
 @media (max-width: 480px) {
-    /* Adjust button size for very small screens */
+    /* Adjust button size for very small phone screens */
     .nav .button {
         width: 20px;
         height: 20px;
@@ -59,14 +60,13 @@
     .nav {
         display: flex;
         flex-direction: row;
-        /* align-items: center; */
     }
-
 
     .nav span {
         font-size: 16px;
     }
 }
+
 
 .container-text {
     text-align: center;     
@@ -91,60 +91,44 @@
         padding: 15px;    
     }
 }
-.container-image {
-    position: relative; 
-    width: 100%;        
-    height: 400px;      
-    overflow: hidden;   
-    transform: translateY(-20px); 
-}
-
-/* Blurry image - Bottom layer */
+/* Container for the images */
 .container-image {
     position: relative;
-    width: 100%;
-    height: 400px; 
-    overflow: hidden;
-    transform: translateY(-20px);
+    width: 100%; 
+    height: 700px; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
 }
 
-/* Blurry image */
-.container-image .blurry {
+/*  blurry image */
+.blurry {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%; /* Default size */
-    height: auto;
-    z-index: 1;
+    bottom: 0; 
+    width: 60%; 
+    z-index: 1; 
 }
 
-/* Ellipse image */
-.container-image .ellipse {
+/* ellipse image */
+.ellipse {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%; /* Default size */
-    height: auto;
-    z-index: 2;
+    bottom: 0; 
+    width: 50%;
+    z-index: 2; 
 }
 
-/* Group image - Top layer */
-.container-image .grp {
+/* group image */
+.grp {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%; /* Default size */
-    height: auto;
-    z-index: 3;
+    bottom: 0; 
+    width: 50%; 
+    z-index: 3; 
 }
 
 /* Responsive styles */
 @media (max-width: 1024px) {
     .container-image {
-        height: 300px; /* Adjust height for medium screens */
+        height: 300px; 
     }
 
     .container-image .blurry,
@@ -178,80 +162,40 @@
     }
 }
 
-/* Container for the destination text */
-.destination {
-    display: flex;              
-    flex-direction: column;     
-    justify-content: center;    
-    align-items: center;       
-    text-align: center;        
-    height: 162px;  
-    width: 1200px;  
-    padding: ;         
-}
-
-/* Container for the destination text */
+/* destination text */
 .destination {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 162px;
-    width: 100%; 
-    max-width: 1200px; 
-    padding: 20px; 
+    align-items: flex-start;
+    text-align: left;        
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
-/* Styling for the paragraph element */
+/*  p element */
 .destination p {
-    font-size: 72px; /* Default font size */
-    font-weight: 400;
-    margin: 0;
+    font-size: 72px;         
+    font-weight: 400;         
+    margin: 0; 
     font-family: "Gilda Display";
     line-height: 84px;
+    align-content: left;
+    word-break: break-word;
+    text-align: left;
 }
 
-/* Styling for the h4 element */
+/* h4 element */
 .destination h4 {
-    font-size: 24px; /* Default font size */
+    font-size: 18px; 
     font-weight: 500;
     font-family: "Urbanist";
 }
 
-/* Responsive styles */
-@media (max-width: 1024px) {
-    .destination {
-        height: auto; 
-        padding: 15px; 
-    }
-
-    .destination p {
-        font-size: 48px; 
-        line-height: 60px;
-    }
-
-    .destination h4 {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .destination {
-        padding: 10px; 
-    }
-
-    .destination p {
-        font-size: 36px; 
-        line-height: 44px;
-    }
-
-    .destination h4 {
-        font-size: 18px; 
-    }
-}
-
+/* Responsive styles for mobile phones */
 @media (max-width: 480px) {
     .destination {
         padding: 5px; 
@@ -259,98 +203,113 @@
 
     .destination p {
         font-size: 24px; 
-        line-height: 32px;
+        line-height: 32px; 
     }
 
     .destination h4 {
-        font-size: 16px; 
+        font-size: 16px;
     }
 }
+
 /* General reset and box-sizing for consistency */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}/* Container to hold multiple cards */
+}
+
+
+/* General card container styling */
 .card-container {
-    display: flex; 
-    flex-wrap: wrap;
-    gap: 20px; 
-    justify-content: space-between; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
     padding: 20px; 
+    gap: 20px; 
 }
 
 /* Individual card styling */
 .card1, .card2, .card3, .card4, .card5, .card6 {
-    flex: 1 1 calc(33.3% - 20px); 
-    border: 1px solid #ccc; 
-    border-radius: 8px; 
-    overflow: hidden; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    background-color: #fff; 
-    padding: 16px, 16px, 36px, 16px; 
-    gap: 28px;
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px; 
+    text-align: left; 
 }
 
-/* Styling for the images */
+/* Styling for images inside the cards */
 .card1 img, .card2 img, .card3 img, .card4 img, .card5 img, .card6 img {
     width: 100%; 
-    justify-content: center;
-    height:300px; 
+    height: auto; 
     object-fit: cover; 
-    border-radius: 8px; 
     margin-bottom: 10px; 
-    padding: 16px, 16px, 36px, 16px;
 }
 
 /* Inner content styling */
 .left {
-    padding: 10px;
+    padding: 0; 
+    text-align: left; 
 }
 
-/* Heading styling */
+/* Heading (h2) styling for each card */
 .left h2 {
     font-size: 1.5em; 
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     font-family: "Urbanist";
     font-weight: 700;
-    size: 24px;
-    line-height: 36px;
+    color: #333;
 }
 
 /* Location container styling */
 .location-container {
     display: flex;
-    align-items: center; 
-    width: Fill (330.67px);
-    height: Hug (32px);
+    justify-content: flex-start; 
+    align-items: center;
     gap: 8px;
-    opacity: 0.7;
-    
+    opacity: 0.7; 
 }
 
-/* Styling for the location icon */
-.location{
-    width: 24px; 
-    height: 24px; 
-    margin-right: 5px; 
-    size: 10px;
+/* Location icon styling */
+.location {
+    width: 24px;
+    height: 24px;
 }
 
-/* Styling for the location text */
+/* Location text styling */
 .location-container h4 {
     font-size: 1em;
-    color: #333; 
     font-family: "Urbanist";
     font-weight: 600;
-    size: 18px;
-    line-height: 32px;
+    color: #333;
 }
 
-/* Media query for responsiveness */
+/* Media query for mobile responsiveness */
 @media (max-width: 768px) {
+    .card-container {
+        padding: 10px; 
+    }
+
     .card1, .card2, .card3, .card4, .card5, .card6 {
-        flex: 1 1 100%; 
+        width: 100%; /* Cards take up full width on smaller screens */
+    }
+
+    .card1 img, .card2 img, .card3 img, .card4 img, .card5 img, .card6 img {
+        width: 100%; /* Full width for the image on mobile */
+    }
+
+    .left h2 {
+        font-size: 1.2em; /* Smaller heading font size for mobile */
+    }
+
+    .location-container h4 {
+        font-size: 0.9em; /* Adjust location text size for mobile */
     }
 }
 
@@ -384,51 +343,54 @@
     font-weight: 500;
 
 }
-/* Container for all cards */
-.card-container {
+/* Card container styling */
+.card-container-hover {
     display: flex;
-    gap: 28px;
-    width: 100%; 
-    max-width: 1200px; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    gap: 28px; 
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
     height: auto; 
-    flex-wrap: wrap; 
 }
 
 /* Individual card styling */
 .card-2 {
-    flex: 1; 
     background-color: #FFFFFF;
-    height: 400px; 
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    width: 300px; 
+    height: 300px; 
+    flex-shrink: 0; 
+    border-top: 5px solid #25A59E; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
-    gap: 80px;
-    min-width: 300px; 
-    width: calc(33.33% - 18.67px); 
+    padding: 16px; 
+    gap: 20px; 
+    overflow: hidden; 
 }
 
 /* Hover effect for each card */
 .card-2:hover {
     background-color: #25A59E;
+    border-color: transparent; 
 }
 
 /* Change text color and arrow on hover */
 .card-2:hover .title-for-card,
 .card-2:hover .description-for-explanation,
 .card-2:hover .more-details a {
-    color: #FFFFFF;  /* Set text to white on hover */
+    color: #FFFFFF; 
 }
 
 .card-2:hover .action img {
     filter: brightness(0) invert(1); /* Change arrow icon color to white on hover */
 }
 
-/* Content styling */
+/* Content container */
 .container-4 {
     display: flex;
     flex-direction: column;
@@ -436,34 +398,44 @@
     height: 100%;
 }
 
+/* Title for card - respect line breaks */
 .title-for-card {
-    font-size: 40px;
-    line-height: 62px;
-    font-weight: 400;
-    margin-bottom: 10px;
-    font-family: "Gilda Display";
+    font-size: 24px;
+    line-height: 1.5; 
+    font-weight: 600;
+    font-family: "Gilda Display"; 
+    color: #0c0000; 
+    margin-bottom: 15px; 
+    text-align: left; 
+    white-space: pre-line; 
 }
 
+/* Description text */
 .description-for-explanation {
-    font-size: 18px;
-    color: #0c0000;
-    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
     font-family: "Urbanist";
     font-weight: 400;
-    line-height: 32px;
+    line-height: 1.5;
+    text-align: left; 
 }
 
 /* Action section */
 .action {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 10px; 
 }
 
+/* More details link */
 .more-details a {
     text-decoration: none;
     color: #25A59E;
     font-weight: bold;
+    font-family: "Gilda Display";
+    font-size: 16px;
 }
 
 .more-details a:hover {
@@ -476,78 +448,34 @@
     height: 24px;
 }
 
-/* Align the more-details link to the right */
-.more-details {
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
-    font-family: "Gilda Display";
-    font-size: 20px;
-    line-height: 23.54px;
-}
-
-/* Responsive styles */
-@media (max-width: 1024px) {
-    .card-container {
-        gap: 20px; 
-    }
-
-    .card-2 {
-        width: calc(50% - 14px); 
-        min-width: 280px; 
-    }
-
-    .title-for-card {
-        font-size: 32px;
-    }
-
-    .description-for-explanation {
-        font-size: 16px; 
-    }
-}
-
+/* Media query for mobile devices */
 @media (max-width: 768px) {
-    .card-container {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
     .card-2 {
         width: 100%; 
-        max-width: 500px; 
         height: auto; 
+        max-width: 320px;
+        padding: 12px; 
     }
 
     .title-for-card {
-        font-size: 28px; 
+        font-size: 20px; 
+        margin-bottom: 12px; 
     }
 
     .description-for-explanation {
         font-size: 14px; 
-    }
-}
-
-@media (max-width: 480px) {
-    .card-container {
-        padding: 10px; 
+        margin-bottom: 8px; 
     }
 
-    .card-2 {
-        width: 100%; 
-        padding: 15px; 
-    }
-
-    .title-for-card {
-        font-size: 24px; 
-    }
-
-    .description-for-explanation {
-        font-size: 14px; 
+    .action img {
+        width: 20px;
+        height: 20px; 
     }
 }
 /* Styling for the memorable section */
 .memorable {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
@@ -556,6 +484,7 @@
     height: auto;
     gap: 26px;
     margin: auto; 
+    padding-top: 120px;
 }
 
 /* Styling for the text container */
@@ -587,8 +516,6 @@
     font-family: "Gilda Display";
     font-weight: 400;
     line-height: 84px;
-    white-space: nowrap; /* Prevent line breaks */
-    overflow: hidden;    /* Hide any overflow text */
 
 }
 
@@ -639,101 +566,84 @@
     }
 }
 
-/* Styling for the watch section */
+
+/* the paragraph */
 .watch {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 168px;
+    flex-direction: column; 
+    height: auto; 
     text-align: center;
     padding: 20px;
-    padding-top: 170px;
+    padding-top: 150px;
 }
 
-/* Styling for the paragraph text */
+/* paragraph text */
 .watch p {
-    font-size: 72px;
+    font-size: 48px; 
     font-weight: 400;
     color: #262626;
-    line-height: 84px;
+    line-height: 60px;
     font-family: "Gilda Display";
-    border: 0.2px;
+    margin-bottom: 50px; 
+    padding: 0 20px; 
 }
 
-/* Styling for the video container */
+/*video */
 .video {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     padding-bottom: 70px;
-    padding-top: 70px;
+    padding-top: 70px; 
 }
 
-/* Styling for the video element */
+/* video element */
 .video iframe {
-    width: 1440px;
-    height: 600px;
-    max-width: 100%;
+    width: 80%; 
+    height: auto;
+    max-width: 1440px;
+    aspect-ratio: 16/9; 
     border: none;
 }
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
     .watch {
-        padding: 15px; 
-        padding-top: 100px; 
-    }
-
-    .watch p {
-        font-size: 48px; 
-        line-height: 60px; 
-    }
-
-    .video {
-        padding: 20px; 
-        padding-top: 40px; 
-        padding-bottom: 40px; 
-    }
-
-    .video iframe {
-        width: 100%; 
-        height: 300px; 
-    }
-}
-
-@media (max-width: 480px) {
-    .watch {
-        padding: 10px; 
-        padding-top: 80px; 
+        padding: 10px;
+        padding-top: 100px;
     }
 
     .watch p {
         font-size: 36px; 
-        line-height: 48px; 
+        line-height: 50px;
+        margin-bottom: 30px; 
     }
 
     .video {
-        padding: 10px; 
-        padding-top: 30px;
-        padding-bottom: 30px; 
+        padding: 10px;
+        padding-top: 20px;
+        padding-bottom: 30px;
     }
 
     .video iframe {
         width: 100%; 
-        height: 200px;
+        height: 250px; 
     }
 }
 
-/* Styling for the CTA section */
+/* CTA container styling */
 .cta {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: left;
     padding: 40px;
     border-radius: 8px;
     padding-left: 50px;
     padding-right: 50px;
+    
 }
 
 /* Styling for the heading */
@@ -742,7 +652,9 @@
     margin: 0;
     font-family: "Gilda Display";
     font-weight: 400;
-    line-height: 84px;
+    line-height: 1.2; 
+    color: #262626;
+    
 }
 
 /* Styling for the image */
@@ -751,66 +663,99 @@
     width: auto;
 }
 
-/* Responsive styling */
+/* Responsive styling for mobile devices */
 @media (max-width: 768px) {
     .cta {
         flex-direction: column; 
-        align-items: flex-start; 
+        align-items: left; 
         text-align: left; 
-        padding-left: 20px; 
-        padding-right: 20px; 
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 5px; 
     }
 
-    /* .cta h1 {
-        margin-bottom: 15px;
-    } */
+    /* Reduce heading font size on mobile for better readability */
+    .cta h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        line-height: 1.3; 
+    }
 
+    /* Reduce the size of the CTA image on mobile */
     .cta img {
         height: 40px;
+        margin-top: 5px; 
     }
 }
+
 /* Styling for the footer section */
 .footer {
     text-align: left;
     padding: 20px;
 
+
 }
 
-/* Styling for paragraphs in the footer */
+/* Footer container styling */
+.footer {
+    text-align: left; 
+    padding: 20px;
+    border-top: 1px solid #b0b0b0; 
+    color: #333; 
+    font-family: "Urbanist";
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+/* Styling for the highlighted span text */
+.footer p span {
+    font-weight: 600;
+    font-size: 16px; 
+    color: #25A59E; 
+    font-family: "Gilda Display";
+    line-height: 18.83px;
+    letter: 10%;
+
+}
+
+/* Styling for the paragraph */
 .footer p {
     margin: 10px 0;
-    font-size: 18px;
+    line-height: 24px; 
     color: #595959;
     font-family: "Urbanist";
     font-weight: 500;
-    line-height: 32px;
-    white-space: nowrap; 
+
 }
 
-/* Styling for the span element */
-.footer span {
-    color: #25A59E;
-    font-weight: 400;
-    font-family: "Gilda Display";
-    font-size: 28px;
-    letter-spacing: 10%; 
-    line-height: 32.96px;
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px; 
+    }
+
+    .footer p span {
+        font-size: 1.2em; 
+    }
+
+    .footer p {
+        font-size: 14px; 
+    }
 }
-
-
+/* social icons and home-links */
 .social-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; 
+    align-items: center; 
     padding: 20px;
+    gap: 20px; 
 }
 
 /* Styling for the social section */
 .social {
     display: flex;
+    justify-content: center; 
     gap: 32px;
-    height: 42px; 
-    width: 184px; 
 }
 
 /* Styling for the social images */
@@ -820,53 +765,19 @@
     color: #25A59E;
 }
 
-/* Responsive styling for mobile phones */
-@media (max-width: 768px) {
-    .social-container {
-        justify-content: center; 
-        padding: 10px; 
-    }
-
-    .social {
-        gap: 20px; 
-        width: auto; 
-    }
-
-    .social a img {
-        width: 18px; 
-        height: auto; 
-    }
-}
-
-@media (max-width: 480px) {
-    .social-container {
-        flex-direction: column; 
-        padding: 15px; 
-    }
-
-    .social {
-        justify-content: center; 
-        gap: 16px; 
-        width: auto; 
-    }
-
-    .social a img {
-        width: 16px; 
-        height: auto; 
-    }
-}
-/* Styling for the home-link section */
+/* home-link section */
 .home-link {
-    display: flex; 
+    display: flex;
+    justify-content: center; 
     gap: 20px; 
 }
 
 /* Styling for the home-link anchors */
 .home-link a {
-    text-decoration: none; 
-    color:#595959; 
-    font-size: 18px; 
-    transition: color 0.3s ease; 
+    text-decoration: none;
+    color: #595959;
+    font-size: 18px;
+    transition: color 0.3s ease;
     font-family: "Urbanist";
     font-weight: 600;
     line-height: 32px;
@@ -877,6 +788,45 @@
     color: #007bff; 
 }
 
+/* Responsive styling for mobile phones */
+@media (max-width: 768px) {
+    .social-container {
+        padding: 10px;
+    }
+
+    .social {
+        gap: 20px;
+    }
+
+    .social a img {
+        width: 18px;
+        height: auto;
+    }
+
+    .home-link a {
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .social-container {
+        padding: 15px;
+        gap: 16px; 
+    }
+
+    .social {
+        gap: 16px; 
+    }
+
+    .social a img {
+        width: 16px; 
+        height: auto;
+    }
+
+    .home-link a {
+        font-size: 14px; 
+    }
+}
 
 
 
