@@ -2,9 +2,7 @@
     --blue-color: #25A59E;
     --orange-color: #FF6C19;
     --white-color: #F8F9FC;
-
-
-
+}
 .Urbanist {
     font-family: "Urbanist";
     font-optical-sizing: auto;
@@ -22,19 +20,16 @@
     justify-content: space-between; 
     padding: 10px 20px;        
 }
-
 .nav .button {
     width: 30px;          
     height: 30px;           
     cursor: pointer;          
 }
-
 .nav span {
     color: #25A59E;
     font-weight: bold;
     font-size: 20px; 
 }
-
 /* Responsive styles for mobile phones */
 @media (max-width: 600px) {
     
@@ -48,7 +43,6 @@
         font-size: 18px;
     }
 }
-
 @media (max-width: 480px) {
     /* Adjust button size for very small phone screens */
     .nav .button {
@@ -61,20 +55,30 @@
         display: flex;
         flex-direction: row;
     }
-
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px; 
+    }
+    
+    /* Media query for desktop */
+    @media (min-width: 992px) {
+        .nav {
+            padding: 20px 40px; 
+        
+        }
+    }
     .nav span {
         font-size: 16px;
     }
 }
-
-
 .container-text {
     text-align: center;     
     padding: 20px;          
 }
-
 .container-text p {
-    font-family: 'Gilda Display', serif;  
+    font-family: "Gilda Display";  
     font-size: 70px;            
     line-height: 1.4;  
     font-weight: 400;              
@@ -90,6 +94,18 @@
         font-size: 40px;  
         padding: 15px;    
     }
+   /* Media query for desktop  */
+    @media (min-width: 992px) {
+    .container-text p {
+        font-size: 300px;    
+        line-height: 280px;
+        font-weight: 400; 
+        text-align: center;
+        padding: 20px;        
+        margin-top: 0px;          
+    }
+}
+
 }
 /* Container for the images */
 .container-image {
@@ -99,9 +115,11 @@
     display: flex;
     justify-content: center;
     align-items: flex-end; 
+    margin-bottom: 0px; 
+    box-sizing: border-box;
 }
 
-/*  blurry image */
+/* Blurry image */
 .blurry {
     position: absolute;
     bottom: 0; 
@@ -109,7 +127,7 @@
     z-index: 1; 
 }
 
-/* ellipse image */
+/* Ellipse image */
 .ellipse {
     position: absolute;
     bottom: 0; 
@@ -117,7 +135,7 @@
     z-index: 2; 
 }
 
-/* group image */
+/* Group image */
 .grp {
     position: absolute;
     bottom: 0; 
@@ -125,72 +143,84 @@
     z-index: 3; 
 }
 
-/* Responsive styles */
+/* Responsive styles for smaller devices */
 @media (max-width: 1024px) {
     .container-image {
-        height: 300px; 
+        height: 300px;
+        margin-bottom: 15px;
     }
 
     .container-image .blurry,
     .container-image .ellipse,
     .container-image .grp {
-        width: 80%; /* Increase width for medium screens */
+        width: 80%;
     }
 }
 
 @media (max-width: 768px) {
     .container-image {
-        height: 250px; /* Adjust height for smaller screens */
+        height: 250px;
+        margin-bottom: 10px;
     }
 
     .container-image .blurry,
     .container-image .ellipse,
     .container-image .grp {
-        width: 90%; /* Increase width for smaller screens */
+        width: 90%;
     }
 }
 
 @media (max-width: 480px) {
     .container-image {
-        height: 200px; /* Adjust height for very small screens */
+        height: 200px;
+        margin-bottom: 5px;
     }
 
     .container-image .blurry,
     .container-image .ellipse,
     .container-image .grp {
-        width: 100%; /* Full width for very small screens */
+        width: 100%;
     }
 }
 
-/* destination text */
-.destination {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;        
-    height: auto;
-    width: 100%;
-    max-width: 1200px;
-    padding: 10px;
-    box-sizing: border-box;
+/* Desktop view */
+@media (min-width: 1200px) {
+    .container-image {
+        height: 800px; 
+        margin-bottom: 30px;
+        transform: translateY(-250px); 
+    }
+
+    .blurry {
+        width: 65%; 
+    }
+
+    .ellipse {
+        width: 55%; 
+    }
+
+    .grp {
+        width: 60%; 
+    }
 }
 
-/*  p element */
+/* p element */
 .destination p {
-    font-size: 72px;         
-    font-weight: 400;         
-    margin: 0; 
+    font-size: 72px;
+    font-weight: 400;
+    margin: 0;
     font-family: "Gilda Display";
     line-height: 84px;
-    align-content: left;
-    word-break: break-word;
+    word-break: normal; 
+    white-space: nowrap; 
     text-align: left;
+    justify-content: center;
+    align-items: center;
 }
 
 /* h4 element */
 .destination h4 {
-    font-size: 18px; 
+    font-size: 18px;
     font-weight: 500;
     font-family: "Urbanist";
 }
@@ -198,12 +228,12 @@
 /* Responsive styles for mobile phones */
 @media (max-width: 480px) {
     .destination {
-        padding: 5px; 
+        padding: 5px;
     }
 
     .destination p {
-        font-size: 24px; 
-        line-height: 32px; 
+        font-size: 24px;
+        line-height: 32px;
     }
 
     .destination h4 {
@@ -211,6 +241,30 @@
     }
 }
 
+/* Desktop media query */
+@media (min-width: 992px) {
+    .destination {
+        align-items: center;  
+        text-align: center;   
+        margin-top: 0px;      
+        transform: translateY(-200px);
+    }
+
+    .destination p {
+        font-size: 100px;    
+        line-height: 110px;  
+        word-break: normal;  
+        white-space: nowrap; 
+        transform: translateY(-400px);
+        transform: translateX(100px);  
+
+    }
+
+    .destination h4 {
+        font-size: 24px;  
+        
+    }
+}
 /* General reset and box-sizing for consistency */
 * {
     margin: 0;
@@ -222,14 +276,14 @@
 /* General card container styling */
 .card-container {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px; 
-    gap: 20px; 
+    padding: 20px;
+    gap: 20px;
 }
 
 /* Individual card styling */
@@ -240,27 +294,27 @@
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    padding: 20px; 
-    text-align: left; 
+    padding: 20px;
+    text-align: left;
 }
 
 /* Styling for images inside the cards */
 .card1 img, .card2 img, .card3 img, .card4 img, .card5 img, .card6 img {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-    margin-bottom: 10px; 
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
 /* Inner content styling */
 .left {
-    padding: 0; 
-    text-align: left; 
+    padding: 0;
+    text-align: left;
 }
 
 /* Heading (h2) styling for each card */
 .left h2 {
-    font-size: 1.5em; 
+    font-size: 1.5em;
     margin-bottom: 10px;
     font-family: "Urbanist";
     font-weight: 700;
@@ -270,10 +324,10 @@
 /* Location container styling */
 .location-container {
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     align-items: center;
     gap: 8px;
-    opacity: 0.7; 
+    opacity: 0.7;
 }
 
 /* Location icon styling */
@@ -290,26 +344,44 @@
     color: #333;
 }
 
-/* Media query for mobile responsiveness */
+/* Media query for mobile */
 @media (max-width: 768px) {
     .card-container {
-        padding: 10px; 
+        padding: 10px;
+        flex-direction: column;
     }
 
     .card1, .card2, .card3, .card4, .card5, .card6 {
-        width: 100%; /* Cards take up full width on smaller screens */
+        width: 100%; 
     }
 
     .card1 img, .card2 img, .card3 img, .card4 img, .card5 img, .card6 img {
-        width: 100%; /* Full width for the image on mobile */
+        width: 100%; 
     }
 
     .left h2 {
-        font-size: 1.2em; /* Smaller heading font size for mobile */
+        font-size: 1.2em; 
     }
 
     .location-container h4 {
-        font-size: 0.9em; /* Adjust location text size for mobile */
+        font-size: 0.9em; 
+    }
+}
+
+/* Media query for desktop view*/
+@media (min-width: 769px) {
+    .card-container {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        gap: 20px; 
+        flex-direction: row;
+        transform: translateY(-150px);
+    }
+
+    .card1, .card2, .card3, .card4, .card5, .card6 {
+        flex: 1 1 calc(33.333% - 40px); 
+        max-width: calc(33.333% - 40px); 
     }
 }
 
@@ -338,7 +410,7 @@
 .why h5 {
     font-size: 18px; 
     line-height: 32px; 
-    color: #0c0000; 
+    color:#737373; 
     font-family: "Urbanist";
     font-weight: 500;
 
@@ -347,47 +419,47 @@
 .card-container-hover {
     display: flex;
     flex-direction: column; 
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    gap: 28px; 
+    gap: 28px;
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    height: auto; 
+    height: auto;
 }
 
 /* Individual card styling */
 .card-2 {
     background-color: #FFFFFF;
-    width: 300px; 
-    height: 300px; 
-    flex-shrink: 0; 
-    border-top: 5px solid #25A59E; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    border-top: 5px solid #25A59E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 16px; 
-    gap: 20px; 
-    overflow: hidden; 
+    padding: 16px;
+    gap: 20px;
+    overflow: hidden;
 }
 
 /* Hover effect for each card */
 .card-2:hover {
     background-color: #25A59E;
-    border-color: transparent; 
+    border-color: transparent;
 }
 
 /* Change text color and arrow on hover */
 .card-2:hover .title-for-card,
 .card-2:hover .description-for-explanation,
 .card-2:hover .more-details a {
-    color: #FFFFFF; 
+    color: #FFFFFF;
 }
 
 .card-2:hover .action img {
-    filter: brightness(0) invert(1); /* Change arrow icon color to white on hover */
+    filter: brightness(0) invert(1); 
 }
 
 /* Content container */
@@ -401,13 +473,13 @@
 /* Title for card - respect line breaks */
 .title-for-card {
     font-size: 24px;
-    line-height: 1.5; 
+    line-height: 1.5;
     font-weight: 600;
-    font-family: "Gilda Display"; 
-    color: #0c0000; 
-    margin-bottom: 15px; 
-    text-align: left; 
-    white-space: pre-line; 
+    font-family: "Gilda Display";
+    color: #0c0000;
+    margin-bottom: 15px;
+    text-align: left;
+    white-space: pre-line;
 }
 
 /* Description text */
@@ -418,7 +490,7 @@
     font-family: "Urbanist";
     font-weight: 400;
     line-height: 1.5;
-    text-align: left; 
+    text-align: left;
 }
 
 /* Action section */
@@ -426,7 +498,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 10px; 
+    gap: 10px;
 }
 
 /* More details link */
@@ -451,25 +523,38 @@
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .card-2 {
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
         max-width: 320px;
-        padding: 12px; 
+        padding: 12px;
     }
 
     .title-for-card {
-        font-size: 20px; 
-        margin-bottom: 12px; 
+        font-size: 20px;
+        margin-bottom: 12px;
     }
 
     .description-for-explanation {
-        font-size: 14px; 
-        margin-bottom: 8px; 
+        font-size: 14px;
+        margin-bottom: 8px;
     }
 
     .action img {
         width: 20px;
-        height: 20px; 
+        height: 20px;
+    }
+}
+
+/* Media query for desktop view */
+@media (min-width: 769px) {
+    .card-container-hover {
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+    }
+    .card-2 {
+        width: calc(33.333% - 28px); 
+        height: auto; 
     }
 }
 /* Styling for the memorable section */
@@ -491,6 +576,7 @@
 .text-container {
     flex: 1;
     max-width: 60%;
+    text-align: left; 
 }
 
 /* Styling for the image container */
@@ -516,7 +602,6 @@
     font-family: "Gilda Display";
     font-weight: 400;
     line-height: 84px;
-
 }
 
 /* Styling for the subheading */
@@ -561,11 +646,36 @@
     .memorable h2 {
         font-size: 48px; 
         white-space: normal; 
-        /* word-wrap: break-word;  */
         line-height: 1.2; 
     }
 }
 
+/* Media query for desktop view */
+@media (min-width: 769px) {
+    .memorable {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px; 
+    }
+
+    .text-container {
+        flex: 1;
+        max-width: 50%; 
+        text-align: left; 
+    }
+
+    .image-container {
+        flex: 1;
+        justify-content: flex-end;
+        max-width: 50%; 
+    }
+
+    .img1 {
+        width: 100%; 
+        height: auto;
+    }
+}
 
 /* the paragraph */
 .watch {
@@ -579,7 +689,7 @@
     padding-top: 150px;
 }
 
-/* paragraph text */
+/* Paragraph text */
 .watch p {
     font-size: 48px; 
     font-weight: 400;
@@ -588,19 +698,21 @@
     font-family: "Gilda Display";
     margin-bottom: 50px; 
     padding: 0 20px; 
+    white-space: nowrap; 
+    overflow-wrap: break-word; 
 }
 
-/*video */
+/* Video */
 .video {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    padding-bottom: 70px;
-    padding-top: 70px; 
+    padding-bottom: 100px;
+    padding-top: 100px; 
 }
 
-/* video element */
+/* Video element */
 .video iframe {
     width: 80%; 
     height: auto;
@@ -609,7 +721,7 @@
     border: none;
 }
 
-/* Media query for responsiveness */
+/* Media query for mobile responsiveness */
 @media (max-width: 768px) {
     .watch {
         padding: 10px;
@@ -620,6 +732,7 @@
         font-size: 36px; 
         line-height: 50px;
         margin-bottom: 30px; 
+        white-space: normal; 
     }
 
     .video {
@@ -634,16 +747,30 @@
     }
 }
 
+/* Media query for desktop view */
+@media (min-width: 769px) {
+    .video iframe {
+            width: 100%; 
+            height: auto; 
+            gap: 10px;
+            transform: translateY(-120px);
+    }
+
+    .watch p {
+        white-space: normal; 
+    }
+}
+
 /* CTA container styling */
 .cta {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     padding: 40px;
     border-radius: 8px;
     padding-left: 50px;
     padding-right: 50px;
-    
+    gap: 20px; 
 }
 
 /* Styling for the heading */
@@ -654,7 +781,6 @@
     font-weight: 400;
     line-height: 1.2; 
     color: #262626;
-    
 }
 
 /* Styling for the image */
@@ -667,94 +793,127 @@
 @media (max-width: 768px) {
     .cta {
         flex-direction: column; 
-        align-items: left; 
+        align-items: flex-start; 
         text-align: left; 
         padding-left: 20px;
         padding-right: 20px;
         gap: 5px; 
     }
 
-    /* Reduce heading font size on mobile for better readability */
+    /* Reduce heading font size on mob */
     .cta h1 {
         font-size: 1.5em;
         margin-bottom: 10px;
         line-height: 1.3; 
     }
 
-    /* Reduce the size of the CTA image on mobile */
+    /* size of the CTA image on mobile */
     .cta img {
         height: 40px;
         margin-top: 5px; 
     }
 }
 
+/* Media query for desktop view */
+@media (min-width: 769px) {
+    .cta {
+        flex-direction: row;
+        align-items: center; 
+        justify-content: space-between; 
+        gap: 20px; 
+        padding-left: 50px; 
+        padding-right: 50px;
+        transform: translateY(-150px);
+    }
+
+    .cta h1 {
+        white-space: nowrap; 
+        font-size: 2.5em; 
+    }
+
+    .cta img {
+        height: 60px; 
+        width: auto;
+    }
+}
 /* Styling for the footer section */
 .footer {
     text-align: left;
     padding: 20px;
-
-
 }
 
 /* Footer container styling */
 .footer {
-    text-align: left; 
-    padding: 20px;
-    border-top: 1px solid #b0b0b0; 
-    color: #333; 
-    font-family: "Urbanist";
+    text-align: left;
     padding: 30px 20px;
+    border-top: 1px solid #b0b0b0;
+    color: #333;
+    font-family: "Urbanist";
     margin-top: 40px;
 }
 
-/* Styling for the highlighted span text */
+/* Styling span text */
 .footer p span {
     font-weight: 600;
-    font-size: 16px; 
-    color: #25A59E; 
+    font-size: 16px;
+    color: #25A59E;
     font-family: "Gilda Display";
     line-height: 18.83px;
-    letter: 10%;
-
+    letter-spacing: 0.1em;
 }
 
 /* Styling for the paragraph */
 .footer p {
     margin: 10px 0;
-    line-height: 24px; 
+    line-height: 24px;
     color: #595959;
     font-family: "Urbanist";
     font-weight: 500;
-
 }
 
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
     .footer {
-        padding: 15px; 
+        padding: 15px;
     }
 
     .footer p span {
-        font-size: 1.2em; 
+        font-size: 1.2em;
     }
 
     .footer p {
-        font-size: 14px; 
+        font-size: 14px;
+    }
+}
+
+/* Media query for desktop view */
+@media (min-width: 769px) {
+    .footer {
+        padding: 40px 60px; 
+    }
+
+    .footer p {
+        font-size: 16px; 
+        line-height: 28px; 
+    }
+
+    .footer p span {
+        font-size: 16px; 
     }
 }
 /* social icons and home-links */
 .social-container {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    gap: 20px; 
+    gap: 20px;
 }
 
 /* Styling for the social section */
 .social {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     gap: 32px;
 }
 
@@ -768,11 +927,11 @@
 /* home-link section */
 .home-link {
     display: flex;
-    justify-content: center; 
-    gap: 20px; 
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Styling for the home-link anchors */
+/* Styling for the home-link */
 .home-link a {
     text-decoration: none;
     color: #595959;
@@ -783,9 +942,9 @@
     line-height: 32px;
 }
 
-/* Hover effect for home-link anchors */
+/* Hover effect for home-link */
 .home-link a:hover {
-    color: #007bff; 
+    color: #007bff;
 }
 
 /* Responsive styling for mobile phones */
@@ -804,30 +963,48 @@
     }
 
     .home-link a {
-        font-size: 16px; 
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
     .social-container {
         padding: 15px;
-        gap: 16px; 
+        gap: 16px;
     }
 
     .social {
-        gap: 16px; 
+        gap: 16px;
     }
 
     .social a img {
-        width: 16px; 
+        width: 16px;
         height: auto;
     }
 
     .home-link a {
-        font-size: 14px; 
+        font-size: 14px;
     }
 }
 
+/* Media query for desktop  */
+@media (min-width: 769px) {
+    .social-container {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 40px 60px;
+    }
+
+    .social {
+        justify-content: flex-start; 
+        gap: 32px; 
+    }
+
+    .home-link {
+        justify-content: flex-end;
+    }
+}
 
 
 
