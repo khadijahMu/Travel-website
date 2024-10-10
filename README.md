@@ -27,7 +27,7 @@ introduction: The travel website is a website where you can explore fascinating 
 
 ## Live Demo
 
-Check out the live demo of the project: [Live Demo Link](https://example.com)
+Check out the live demo of the project: [Live Demo Link](https://travel-website-khadijah.onrender.com)
 
 ## Features
 
@@ -61,7 +61,7 @@ with these simple steps below you can set up the website
 
     ```sh
 
-    cd Travel website
+    cd Travel-website
 
     ```
 
